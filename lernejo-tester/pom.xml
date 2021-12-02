@@ -30,7 +30,9 @@
                         <configuration>
                             <mainClass>fr.lernejo.tester.TestRunner</mainClass>
                             <classpathScope>test</classpathScope>
-                            <arguments>fr.lernejo</arguments>
+                            <arguments>
+                                <argument>fr.lernejo.tester</argument>
+                            </arguments>
                         </configuration>
                         <goals>
                             <goal>java</goal>

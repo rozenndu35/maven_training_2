@@ -7,7 +7,7 @@ import fr.lernejo.tester.api.TestMethod;
 public class TestClassDiscovererLernejoTests {
 
 	@TestMethod
-    static void listTestClasses() {
+    public void listTestClasses() {
     	TestClassDiscoverer testClassDiscover = new TestClassDiscoverer("fr.lernejo.tester");
     	List<TestClassDescription> classeTrouver = testClassDiscover.listTestClasses();
         System.out.println(classeTrouver);

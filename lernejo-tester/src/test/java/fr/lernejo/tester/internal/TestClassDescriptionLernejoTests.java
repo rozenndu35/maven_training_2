@@ -10,7 +10,7 @@ import java.util.List;
 public class TestClassDescriptionLernejoTests {
 
     @TestMethod
-    static void listTestMethods() {
+    public void listTestMethods() {
         Class<SomeLernejoTests> testClass = SomeLernejoTests.class;
         TestClassDescription testClassDescription = new TestClassDescription(testClass);
         List<Method> methodeTrouver = testClassDescription.listTestMethods();
