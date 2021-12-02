@@ -1,14 +1,10 @@
 package fr.lernejo.tester;
 
 import fr.lernejo.tester.api.TestMethod;
-import fr.lernejo.tester.internal.TestClassDescription;
-import fr.lernejo.tester.internal.TestClassDiscoverer;
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class TestRunner {
@@ -18,18 +14,7 @@ public class TestRunner {
            for (String nomPackage : args){
                Reflections reflections = new Reflections(nomPackage, new SubTypesScanner(false));
                Set<Class<?>> allTypes = reflections.getSubTypesOf(Object.class);
-               for ( Class<?> classe : allTypes) {
-                       boolean present = false;
-                       Method[] declareMethods = classe.getDeclaredMethods();
-                       for (Method method : declareMethods) {
-                           if (method.getAnnotation(TestMethod.class) != null) {
-                               present = true;
-                           }
-                       }
-               }
-
-               TestClassDiscoverer testClassDiscover = new TestClassDiscoverer(nomPackage);
-               List<TestClassDescription> classeTrouver = testClassDiscover.listTestClasses();
+              
                System.out.println("Pour le package : "+ nomPackage);
                // Liste les classe trouver dans le package
                System.out.println("___________________ Liste des classe ________________");

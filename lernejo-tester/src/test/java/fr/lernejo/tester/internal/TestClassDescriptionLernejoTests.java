@@ -9,10 +9,6 @@ import java.util.List;
 
 public class TestClassDescriptionLernejoTests {
 
-    public static void main(String args[]){
-        listTestMethods();        
-    }
-
     @TestMethod
     static void listTestMethods() {
         Class<SomeLernejoTests> testClass = SomeLernejoTests.class;
